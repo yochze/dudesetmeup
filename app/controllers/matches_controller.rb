@@ -1,14 +1,15 @@
 class MatchesController < ApplicationController
 
 	def index
-		@match = Match.new
-		
-		perfect_match = current_user.raw(current_user.male_list.sample, current_user.female_list.sample)
-		@female = perfect_match[0]
-		@male = perfect_match[1]
+		if user_signed_in?		
+			perfect_match = current_user.raw(current_user.male_list.sample, current_user.female_list.sample)
+			@female = perfect_match[0]
+			@male = perfect_match[1]
+					@match = Match.new
 
-		@match.female = @female
-		@match.male = @male
+			# @match.female = @female
+			# @match.male = @male
+		end
 	end
 
 	# def new

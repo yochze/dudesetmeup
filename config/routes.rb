@@ -6,7 +6,7 @@ devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_call
 
 devise_scope :user do
   get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
-  delete 'users/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   # get 'edit', :to => 'registrations#edit', :as => :edit_user_registration
 end
 
