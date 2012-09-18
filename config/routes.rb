@@ -1,4 +1,15 @@
-Kupid::Application.routes.draw do
+  Kupid::Application.routes.draw do
+
+resources :matches
+
+devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+devise_scope :user do
+  get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+  delete 'users/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  # get 'edit', :to => 'registrations#edit', :as => :edit_user_registration
+end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +59,7 @@ Kupid::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'matches#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,0 +1,28 @@
+<% if !user_signed_in? %>
+            <div id="facebook-mainpage">
+                <a href="/users/auth/facebook"><img src="/assets/facebook.gif" alt="" border=""></a><p>
+                    התחברו עכשיו
+                    <br>
+                        והתחילו לשחק אותה שדכנים<Br>
+                        בין החברים שלכם
+                    
+                </p>
+            </div> 
+<% else %>
+
+<div class="couple_wrapper">
+    <div class="match_wrapper">
+      <%= image_tag(@female["pic_big"], :size => '200x200', :class => 'perfect_match_image') %>
+    </div> 
+    <div class="match_wrapper">
+        <%= image_tag(@male["pic_big"], :size => '200x200', :class => 'perfect_match_image') %>
+    </div>
+
+    
+    <%= form_for(@match) do |f| %>
+        <%= f.submit "Yes", :name => "yes" %>
+        <%= f.submit "No", :name => "no" %> 
+    <% end %>
+</div>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<% end %>

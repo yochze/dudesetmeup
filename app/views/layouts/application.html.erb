@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir=rtl>
 <head>
   <title>Kupid</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div id="wrapper">
+        <div id="topbar">
+            <a href="#"><img src="/assets/logo.gif" alt="" height="280" border="" ></a>
+        </div><br>
+        <div id="content">
+            <h1>אז מה אם אתה
+            <span style="color: #b95959;">
+"In a Relationship"
+            </span>
+        , זה לא אומר שאתה לא יכול לדאוג לחברים'שך
+            </h1>
+            
+            
+            <br> <br>
 
 <%= yield %>
+
+            
+        </div>
+        
+    </div>
+
 
 </body>
 </html>
