@@ -20,9 +20,9 @@
 
     
     <%= form_for(@match) do |f| %>
-        <%= f.submit "Yes", :name => "yes" %>
+        <%= f.submit "דווקא זורם", :name => "yes", :class => "btn-yes" %>
         <%= f.submit "No", :name => "no" %> 
     <% end %>
-</div>
+</div>  
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% end %>

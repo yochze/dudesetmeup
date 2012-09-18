@@ -98,3 +98,22 @@ body{
     height: 100%;
 
 }
+
+
+.btn-yes {
+  background-color: hsl(0, 74%, 67%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef9898", endColorstr="#e96c6c");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ef9898), to(#e96c6c));
+  background-image: -moz-linear-gradient(top, #ef9898, #e96c6c);
+  background-image: -ms-linear-gradient(top, #ef9898, #e96c6c);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef9898), color-stop(100%, #e96c6c));
+  background-image: -webkit-linear-gradient(top, #ef9898, #e96c6c);
+  background-image: -o-linear-gradient(top, #ef9898, #e96c6c);
+  background-image: linear-gradient(#ef9898, #e96c6c);
+  border-color: #e96c6c #e96c6c hsl(0, 74%, 64.5%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.16);
+  -webkit-font-smoothing: antialiased;
+}
+
