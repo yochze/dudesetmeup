@@ -41,8 +41,7 @@ body{
     padding-top: 23px;
     padding-bottom: 14px;
     width: 500px;
-    background-color: #eee;
-    border: 1px solid rgba(0, 0, 0, 0.02);
+    background-color: transparent;
     border-radius: 4px 4px 4px 4px;
     background-image: url(/assets/h3.png) no-repeat;
     background-position: center;
@@ -52,13 +51,13 @@ body{
 #content .match_wrapper {
     height: 205px;
     width: 205px;
-    margin-right: 9px;
-    margin-left: 9px;
+    margin-right: 14px;
+    margin-left: 14 px;
     display: inline-block;
     box-shadow: 2px 2px 6px 2px #f8f8f8; }
 
 #content .perfect_match_image {
-    border: solid 3px white;
+    border: solid 8px white;
 }
 
 #facebook-mainpage {
@@ -166,16 +165,16 @@ p.caption span {
   background: rgba(0,0,0,0.8); 
   color: white !important; 
   display: none; 
-  padding: 8px 6px !important; 
+  padding: 6px 2px !important; 
   text-align: left; 
   position: absolute !important;
   bottom: 0 !important; 
   left: 0 !important; 
   font: 8pt arial;
   font-weight: bold;
-  margin-bottom: 7px;
-  margin-left: 4px;
-  width: 200px;
+  width: 190px;
+  margin-bottom: 12px;
+  margin-left: 8px;
 
 }
 p.caption span big {
