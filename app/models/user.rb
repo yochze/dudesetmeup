@@ -82,12 +82,12 @@ end
 
   def female_list
     female_list = []
-    female_list = facebook.fql_query("select name, birthday_date, pic_big from user where sex='female' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
+    female_list = facebook.fql_query("select name, uid, birthday_date, pic_big from user where sex='female' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
   end
 
   def male_list
     male_list = []
-    male_list = facebook.fql_query("select name, birthday_date, pic_big from user where sex='male' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
+    male_list = facebook.fql_query("select name, uid, birthday_date, pic_big from user where sex='male' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
   end
 
 
