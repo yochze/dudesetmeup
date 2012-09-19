@@ -12,12 +12,19 @@
 <% else %>
     <div class="couple_wrapper">
         <div class="match_wrapper">
-          <%= image_tag(@female["pic_big"], :size => '200x200', :class => 'perfect_match_image') %>
+            <p class="caption">
+          <%= image_tag(@female["pic_big"], :size => '200x220', :class => 'perfect_match_image') %>
+                <span><%= @female["name"] %></span>
+            </p>
         </div> 
-        <div class="match_wrapper">
-            <%= image_tag(@male["pic_big"], :size => '200x200', :class => 'perfect_match_image') %>
-        </div>
 
+        <div class="match_wrapper">
+            <p class="caption">
+                <%= image_tag(@male["pic_big"], :size => '200x220', :class => 'perfect_match_image', :id => 'default') %>
+                <span><%= @male["name"] %></span>
+            </p>
+        </div>
+<br>
         <br /> <br />
         <%= form_for(@match) do |f| %>
             <%= f.submit "דווקא זורם", :name => "yes", :class => "btn-yes" %>
