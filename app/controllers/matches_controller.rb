@@ -29,7 +29,6 @@ class MatchesController < ApplicationController
 		end
 		@match.user = current_user
 		
-
 		@match.save!
 
 		redirect_to '/'
