@@ -1,14 +1,18 @@
   Kupid::Application.routes.draw do
 
-resources :matches
+  constraints :subdomain => '' do
+    match '(*any)' => redirect { |p, req| req.url.sub('//', '//www.') }
+  end
 
-devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  resources :matches
 
-devise_scope :user do
-  get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
-  delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  # get 'edit', :to => 'registrations#edit', :as => :edit_user_registration
-end
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  devise_scope :user do
+    get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+    delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+    # get 'edit', :to => 'registrations#edit', :as => :edit_user_registration
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
