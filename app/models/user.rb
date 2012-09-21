@@ -40,6 +40,13 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
 end
 
 
+def self.add_action(user_id, match_url)
+  user = User.find(user_id)
+  user.facebook.put_connections("me", "dudesetmeup:set_up", match: match_url) 
+end
+
+
+
   def conditions(male, female)
     girl = female
     boy = male

@@ -28,7 +28,9 @@ class MatchesController < ApplicationController
 		end
 		@match.user = current_user
 		@match.save!
-		current_user.facebook.put_connections("me", "dudesetmeup:set_up", match: match_url(@match)) if params[:yes]
+		if current_user && params[:yes]
+      		User.delay.add_action(current_user.id, match_url(@match))
+    	end
 
 		redirect_to '/'
 	end

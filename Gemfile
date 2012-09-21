@@ -26,6 +26,9 @@ end
 
 gem 'jquery-rails'
 
+
+gem 'delayed_job_active_record' # Support and enables facebook actions
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
