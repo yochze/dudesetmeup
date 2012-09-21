@@ -29,7 +29,7 @@ class MatchesController < ApplicationController
 		@match.user = current_user
 		@match.save!
 		if current_user && params[:yes]
-      		User.delay.add_action(current_user.id, match_url(@match))
+      		User.delay.add_action(current_user.id, "http://www.dudesetmeup.com/matches/157")
     	end
 
 		redirect_to '/'
