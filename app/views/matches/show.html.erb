@@ -1,9 +1,25 @@
 <h1>
 	<%= randomize_happy_phrase.html_safe %>
 </h1> 
-<%= @match.female["name"] %> & <%= @match.male["name"] %>
+    <div class="couple_wrapper">
+        <div class="match_wrapper">
+            <p class="caption">
+          <%= image_tag(@match.female["pic_big"], :size => '200x220', :class => 'perfect_match_image') %>
+                <span><%= @match.female["name"] %></span>
+            </p>
+        </div> 
 
-
+        <div class="match_wrapper">
+            <p class="caption">
+                <%= image_tag(@match.male["pic_big"], :size => '200x220', :class => 'perfect_match_image', :id => 'default') %>
+                <span><%= @match.male["name"] %></span>
+            </p>
+        </div>
+        <div class="matchedby">
+			<span class="matchedby_name"><%= @match.user.name %></span>
+        </div>
+   </div>
+<br> <br>
 
 <% content_for :head do %>
 

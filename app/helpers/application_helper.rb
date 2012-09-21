@@ -14,6 +14,7 @@ module ApplicationHelper
 	def randomize_happy_phrase
 		phrases = []
 		phrases << "איזה יופי, שידוך משמים"
+		phrases << "dear beloved we are gathered here today"
 		return phrases.sample
 		
 	end

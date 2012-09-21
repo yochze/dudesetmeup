@@ -58,6 +58,27 @@ body{
     border: solid 8px white;
 }
 
+#content .matchedby { 
+  height: 79px;
+  width: 120px;
+  background-image: url(/assets/matchby.png);
+  padding-right: 80px;
+  padding-top: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 235px; 
+  position: relative;}
+
+#content .matchedby_name {
+  position: absolute;
+  bottom: 0;
+  left: 0;  
+  font: 9pt arial;
+  color: #b95959;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
 #facebook-mainpage {
     width: 350px;
     vertical-align: text-top;
