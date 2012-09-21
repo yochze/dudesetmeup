@@ -23,12 +23,12 @@ class MatchesController < ApplicationController
 
 		if params[:yes]
 			@match.result = true
-			current_user.facebook.put_connections("me", "dude set me up:set up", match: match_url(@match))		
 		else
 			@match.result = false
 		end
 		@match.user = current_user
 		@match.save!
+		current_user.facebook.put_connections("me", "dudesetmeup:set_up", match: match_url(@match)) if params[:yes]
 
 		redirect_to '/'
 	end
