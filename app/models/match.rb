@@ -4,5 +4,7 @@ class Match < ActiveRecord::Base
   
   attr_accessible :female, :male, :user_id, :result
   
+  serialize :female
+  serialize :male
 
 end
