@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-
+	before_filter :authenticate, :except => [:show, :about, :index]
 	def index
 		if user_signed_in?		
 			perfect_match = current_user.raw(current_user.male_list.sample, current_user.female_list.sample)
@@ -10,6 +10,7 @@ class MatchesController < ApplicationController
 			@match = Match.new
 		end
 	end
+
 
 	def create
 		@match = Match.new
@@ -26,7 +27,6 @@ class MatchesController < ApplicationController
 		if current_user && params[:yes]
       		User.delay.add_action(current_user.id, match_url(@match))
         end
-
 		redirect_to '/'
 	end
 
@@ -35,4 +35,13 @@ class MatchesController < ApplicationController
 		redirect_to '/' if @match.result == false
 	end
 
+	def about
+		@match = Match.last		
+	end
+
+	def authenticate
+		if !user_signed_in?
+			redirect_to matches_path
+		end
+	end
 end

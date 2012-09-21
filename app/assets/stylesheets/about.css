@@ -1,0 +1,30 @@
+
+.textright {
+	font: 10pt arial;
+	color: #393939;
+	text-shadow: 0px -1px white;
+	text-align: justify;
+	width: 500px;
+	display: inline;
+	float: right;
+}
+
+.textleft {
+	font: 10pt arial;
+	color: #393939;
+	text-shadow: 0px -1px white;
+	text-align: justify;
+	width: 400px;	
+	float: left;
+	display: inline;
+}
+
+.title_of_p {
+	font: 11pt arial;
+	color: #b95959;
+	font-weight: bold;
+	text-shadow: 0px -1px white;
+	display: block;
+	letter-spacing: 0.1em;
+	padding-top: 14px;
+	padding-bottom: 14px;}

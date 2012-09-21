@@ -5,6 +5,7 @@
     # end
 
   resources :matches
+    match 'about', :to => 'matches#about', :as => :about_page
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
@@ -16,6 +17,7 @@
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

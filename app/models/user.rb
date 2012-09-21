@@ -47,10 +47,7 @@ end
 
 
 
-  def conditions(male, female)
-    girl = female
-    boy = male
-
+  def conditions(boy, girl)
     if !boy["birthday_date"].nil? && girl["birthday_date"].nil?
       boy_age = Time.now.year - boy["birthday_date"][boy["birthday_date"].size, boy["birthday_date"]  -4].to_i
       girl_age = Time.now.year - girl["birthday_date"][girl["birthday_date"].size, girl["birthday_date"]-4].to_i
@@ -81,7 +78,6 @@ end
       perfect_match << male
     end
   end
-    
 
   def facebook 
     @facebook ||= Koala::Facebook::API.new(oauth_token)
@@ -96,6 +92,5 @@ end
     male_list = []
     male_list = facebook.fql_query("select name, uid, last_name, relationship_status, birthday_date, pic_big from user where sex='male' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
   end
-
-
+  
 end

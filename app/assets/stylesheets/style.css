@@ -12,7 +12,7 @@ h2 {}
 
 body{
     margin: 0;
-    background-image: url('/assets/bg.gif');
+    background-image: url('/assets/groovepaper.png');
     background-repeat: repeat;
 }
 
@@ -30,9 +30,7 @@ body{
     width: 960px;
     height: auto;
     margin-left: auto;
-    margin-right: auto;
-    background-image: url('/assets/bg.gif');
-}
+    margin-right: auto;}
 
 #content .couple_wrapper {
     margin-left: auto;
@@ -180,4 +178,38 @@ p.caption span {
 }
 p.caption span big {
   font-weight: bold; 
+}
+
+
+#footer {
+  font: 10pt arial;
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto; 
+  margin-top: 23px;
+}
+
+#footer ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+  display: inline;
+  float: right;}
+
+#footer li {
+  display: inline;
+  list-style: none;
+  margin-left: 15px;
+  font: 8pt arial;
+}
+
+#footer a {
+  color: #8b8b8b;
+  text-decoration: none;
+  font: 9pt arial;
+  border-bottom: 1px solid #b95959;
+}
+
+#footer a:hover {
+  color: black;
 }
