@@ -1,6 +1,7 @@
 <h1>
 	<%= randomize_happy_phrase.html_safe %>
 </h1> 
+<div class="heartbg">
     <div class="couple_wrapper">
         <div class="match_wrapper">
             <p class="caption">
@@ -19,6 +20,7 @@
 			<span class="matchedby_name"><%= @match.user.name %></span>
         </div>
    </div>
+  </div>
 <br> <br>
 
 <% content_for :head do %>
