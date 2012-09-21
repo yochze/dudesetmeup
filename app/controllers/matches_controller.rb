@@ -23,14 +23,15 @@ class MatchesController < ApplicationController
 
 		if params[:yes]
 			@match.result = true
+			User.delay.add_action(current_user.id, "http://www.dudesetmeup.com/matches/158")
 		else
 			@match.result = false
 		end
 		@match.user = current_user
 		@match.save!
-		if current_user && params[:yes]
-      		User.delay.add_action(current_user.id, "http://www.dudesetmeup.com/matches/157")
-    	end
+		# if current_user && params[:yes]
+  #     		User.delay.add_action(current_user.id, "http://www.dudesetmeup.com/matches/157")
+  #   	end
 
 		redirect_to '/'
 	end
