@@ -54,12 +54,12 @@ end
         false
       end
 
-     elsif boy["name"].include?(girl["name"])
+     elsif boy["last_name"] == girl["last_name"] # DEAL BREAKER!
        false
 
-    # elsif boy[status] == 'relationship' || girl[status] == 'relationship'
-    # false
-    
+    elsif (boy["relationship_status"] == "In a relationship" || boy["relationship_status"]  == "Married" || boy["relationship_status"] == "Engaged") || (girl["relationship_status"] == "In a relationship" || girl["relationship_status"] == "Engaged" || girl["relationship_status"] == "Married")
+      false # We are not family wreckers
+
     else
       true
     end
@@ -82,12 +82,12 @@ end
 
   def female_list
     female_list = []
-    female_list = facebook.fql_query("select name, uid, birthday_date, pic_big from user where sex='female' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
+    female_list = facebook.fql_query("select name, uid, last_name, relationship_status, birthday_date, pic_big from user where sex='female' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
   end
 
   def male_list
     male_list = []
-    male_list = facebook.fql_query("select name, uid, birthday_date, pic_big from user where sex='male' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
+    male_list = facebook.fql_query("select name, uid, last_name, relationship_status, birthday_date, pic_big from user where sex='male' AND (relationship_status<>'In a relationship' OR 'Married') AND uid in (select uid2 from friend where uid1=me())").to_a
   end
 
 
