@@ -6,6 +6,6 @@ module ApplicationHelper
 		phrases << "מה נשאר לחברים שלך לעשות? רק להתכופף ולתקוף"
 		phrases << "הוא סבבה והכל אבל.. בלי אבל! סדרי לי אותו!"
 		phrases << "תגידי.. אממ.. אולי תסדרי לי כבר מישהו?!"
-		return phrase.sample(1)
+		# return phrase.sample(1)
 	end
 end
