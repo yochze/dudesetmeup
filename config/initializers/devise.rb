@@ -213,7 +213,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   require "omniauth-facebook"
-  config.omniauth :facebook, "354930974593675", "47db8033162c8549085b4d173d4ad352",  {:scope => 'publish_stream,email,friends_relationships' } #, :client_options => { :ssl => { :ca_file => '/System/Library/OpenSSL/certs/curl-ca-bundle.crt' } } }
+  config.omniauth :facebook, "354930974593675", "47db8033162c8549085b4d173d4ad352",  {:scope => 'publish_stream,publish_action,email,friends_relationships' } #, :client_options => { :ssl => { :ca_file => '/System/Library/OpenSSL/certs/curl-ca-bundle.crt' } } }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
