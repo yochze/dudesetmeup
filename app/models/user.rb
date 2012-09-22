@@ -47,13 +47,15 @@ end
 
 
 
-  def conditions(boy, girl)
-    if !boy["birthday_date"].nil? && girl["birthday_date"].nil?
-      boy_age = Time.now.year - boy["birthday_date"][boy["birthday_date"].size, boy["birthday_date"]  -4].to_i
-      girl_age = Time.now.year - girl["birthday_date"][girl["birthday_date"].size, girl["birthday_date"]-4].to_i
+  def conditions(male, female)
+    boy = male
+    girl = female
+    if (!boy["birthday_date"].nil? && !girl["birthday_date"].nil?) && (boy["birthday_date"].size == 10 && girl["birthday_date"].size == 10)
+      boy_age = Time.now.year - boy["birthday_date"][boy["birthday_date"].size, boy["birthday_date"].size-4].to_i
+      girl_age = Time.now.year - girl["birthday_date"][girl["birthday_date"].size, girl["birthday_date"].size-4].to_i
     end
 
-    if !boy_age.nil? && !girl_age.nil?
+    if !boy_age.nil? && !girl_age.nil? 
       if ((boy_age/2)+7) < girl_age
         false
       end
