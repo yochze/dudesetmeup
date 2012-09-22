@@ -28,3 +28,14 @@
 	letter-spacing: 0.1em;
 	padding-top: 14px;
 	padding-bottom: 14px;}
+
+	a {
+  color: #8b8b8b;
+  text-decoration: none;
+  font: 10pt arial;
+  border-bottom: 1px solid #b95959;
+}
+
+a:hover {
+  color: black;
+}

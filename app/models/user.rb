@@ -63,7 +63,7 @@ end
      elsif boy["last_name"] == girl["last_name"] # DEAL BREAKER!
        false
 
-    elsif (boy["relationship_status"] == "In a relationship" || boy["relationship_status"]  == "Married" || boy["relationship_status"] == "Engaged") || (girl["relationship_status"] == "In a relationship" || girl["relationship_status"] == "Engaged" || girl["relationship_status"] == "Married")
+    elsif (boy["relationship_status"] == "In a relationship") || (boy["relationship_status"]  == "Married") || (boy["relationship_status"] == "Engaged") || (girl["relationship_status"] == "In a relationship") || (girl["relationship_status"] == "Engaged") || (girl["relationship_status"] == "Married")
       false # We are not family wreckers
 
     else
