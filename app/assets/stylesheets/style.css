@@ -1,3 +1,5 @@
+
+
 h1 {
     font-family: Tahoma;
     font-size: 18pt;
@@ -9,6 +11,7 @@ h1 {
 }
 
 h2 {}
+
 
 body{
     margin: 0;
@@ -27,20 +30,25 @@ body{
 }
 
 #content {
+    top: 0;
     width: 960px;
     height: auto;
     margin-left: auto;
     margin-right: auto;}
 
 #content .heartbg {
-
+  width: 947px;
+  min-height: 244px;
+  background-image: url(/assets/heartbg.png);
+  background-repeat: no-repeat;
+  padding-right: 23px;
+  background-position: center;
 }
 
 #content .couple_wrapper {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding-top: 23px;
     padding-bottom: 14px;
     width: 500px;
     background-color: transparent;
@@ -212,6 +220,7 @@ p.caption span big {
   margin-right: auto;
   margin-left: auto; 
   margin-top: 23px;
+  border-top: 1px solid #eee;
 }
 
 #footer ul {
