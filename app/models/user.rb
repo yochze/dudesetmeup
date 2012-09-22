@@ -56,7 +56,7 @@ end
     end
 
     if !boy_age.nil? && !girl_age.nil? 
-      if ((boy_age/2)+7) < girl_age
+      if ((boy_age/2)+7) <= girl_age
         false
       end
 
