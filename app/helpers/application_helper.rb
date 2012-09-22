@@ -15,6 +15,8 @@ module ApplicationHelper
 		phrases = []
 		phrases << "איזה יופי, שידוך משמים"
 		phrases << "dear beloved we are gathered here today"
+		phrases << "שמלה כבר יש?"
+		phrases << "דיג'יי או להקה?"
 		return phrases.sample
 		
 	end
