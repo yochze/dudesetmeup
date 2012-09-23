@@ -26,7 +26,7 @@ class MatchesController < ApplicationController
 		@match.save!
 		if current_user && params[:yes]
       		User.delay.add_action(current_user.id, match_url(@match))
-      		current_user.facebook.put_wall_post("I just set up " + @match.female["name"] + " & " + @match.male["name"] + " on " + match_url(@match))
+      		current_user.facebook.put_wall_post("I just set up @" + @match.female["name"] + " & @" + @match.male["name"] + " on " + match_url(@match))
         end
 		redirect_to '/'
 	end
