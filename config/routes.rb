@@ -1,8 +1,8 @@
   Kupid::Application.routes.draw do
 
-    # constraints :subdomain => '' do
-    #   match '(*any)' => redirect { |p, req| req.url.sub('//', '//www.') }
-    # end
+    constraints :subdomain => '' do
+      match '(*any)' => redirect { |p, req| req.url.sub('//', '//www.') }
+    end
 
   resources :matches
     match 'about', :to => 'matches#about', :as => :about_page
