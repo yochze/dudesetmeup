@@ -1,3 +1,8 @@
+        <% if notice %>
+            <div id="notice">
+                <img src="/assets/hearticon.png" border="0" alt="" text="" />
+                 <%= notice.html_safe %>
+        <% end %>
     <h1>
         <%= randomize_index_phrase.html_safe %>
     </h1> 

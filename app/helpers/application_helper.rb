@@ -18,7 +18,12 @@ module ApplicationHelper
 		phrases << "שמלה כבר יש?"
 		phrases << "דיג'יי או להקה?"
 		return phrases.sample
-		
 	end
+
+	def like_link(match_url)
+		"<div class=\"fb-like\" style=\"float: left;\" data-href=\"" + match_url + "\" data-send=\"true\" data-layout=\"button_count\" data-width=\"450\" data-show-faces=\"false\"></div>
+             </div>"
+	end
+
 end
 
