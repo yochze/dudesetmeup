@@ -1,4 +1,4 @@
 == Dude set me up!
 
-  Facebook application to set up between your friends.
-  The app retrieves your friends list and randomly match between two of your friends. You, cupid, need to decide whether it's a good or bad match.
+Facebook application to set up between your friends.
+The app retrieves your friends list and randomly match between two of your friends. You, cupid, need to decide whether it's a good or bad match.
